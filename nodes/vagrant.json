@@ -4,7 +4,8 @@
 	"recipe[cookbook-emacs]",
 	"recipe[cookbook-dotfiles]",
 	"recipe[cookbook-cask]",
-	"recipe[cookbook-cask::install-emacspkg]"
+	"recipe[cookbook-cask::install-emacspkg]",
+	"empty"
     ],
     "user" : "vagrant",
     "group" : "users"

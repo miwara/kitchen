@@ -1,6 +1,7 @@
 {
     "run_list": [
 	"utils",
+	"python3::install",
 	"recipe[cookbook-emacs]",
 	"recipe[cookbook-dotfiles]",
 	"recipe[cookbook-cask]",

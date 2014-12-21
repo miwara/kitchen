@@ -6,7 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w{zsh git rsync strace}.each do |pkg|
+%w{
+zsh
+git
+rsync
+strace
+}.each do |pkg|
   package pkg do
     action :upgrade
   end

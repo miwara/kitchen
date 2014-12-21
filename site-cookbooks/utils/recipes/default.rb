@@ -7,12 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 %w{
+ncurses
 zsh
 git
 rsync
 strace
 nano
-emacs
 }.each do |pkg|
   package pkg do
     action :upgrade

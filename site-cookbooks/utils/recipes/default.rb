@@ -11,6 +11,8 @@ zsh
 git
 rsync
 strace
+nano
+emacs
 }.each do |pkg|
   package pkg do
     action :upgrade

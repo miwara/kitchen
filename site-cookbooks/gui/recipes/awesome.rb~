@@ -1,0 +1,14 @@
+%w{
+awesome
+}.each do |pkg|
+  package pkg do
+    action :upgrade
+  end
+end
+
+template "~/.xinitrc" do
+  source "awesome.erb"
+  owner "root"
+
+  action :create
+end

@@ -7,3 +7,10 @@ slim-themes
     action :upgrade
   end
 end
+
+template "/etc/slim.conf" do
+  source "slimconf/slim.conf"
+  owner "root"
+
+  action :create
+end

@@ -8,3 +8,10 @@ xorg-utils
     action :upgrade
   end
 end
+
+template "/home/#{node['user']}/.xinitrc" do
+  source "xinitrc/awesome.erb"
+  user "#{node['user']}"
+
+  action :create
+end

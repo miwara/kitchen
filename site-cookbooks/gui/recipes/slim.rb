@@ -14,3 +14,8 @@ template "/etc/slim.conf" do
 
   action :create
 end
+
+execute "enable slim.service" do
+  command "systemctl enable slim.service"
+  not_if "systemctl status slim.service | grep enabled"
+end

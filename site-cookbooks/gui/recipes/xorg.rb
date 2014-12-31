@@ -16,7 +16,7 @@ end
 
 
 template "/home/#{node['user']}/.xinitrc" do
-  source "xinitrc/awesome.erb"
+  source "xinitrc"
   user "#{node['user']}"
 
   action :create

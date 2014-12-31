@@ -7,7 +7,7 @@ awesome
 end
 
 template "/etc/xdg/awesome/rc.lua" do
-  source "aweconf/rc.lua"
+  source "rc.lua"
   owner "root"
 
   action :create

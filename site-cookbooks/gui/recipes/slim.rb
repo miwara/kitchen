@@ -9,7 +9,7 @@ slim-themes
 end
 
 template "/etc/slim.conf" do
-  source "slimconf/slim.conf"
+  source "slim.conf"
   owner "root"
 
   action :create

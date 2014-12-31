@@ -9,6 +9,12 @@ xorg-utils
   end
 end
 
+template "/etc/X11/xorg.conf.d/10-keymap.conf" do
+  source "xorgconf/10-keymap.conf"
+  action :create
+end
+
+
 template "/home/#{node['user']}/.xinitrc" do
   source "xinitrc/awesome.erb"
   user "#{node['user']}"

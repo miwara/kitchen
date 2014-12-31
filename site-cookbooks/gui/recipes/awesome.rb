@@ -12,3 +12,10 @@ template "/root/.xinitrc" do
 
   action :create
 end
+
+template "/etc/xdg/awesome/rc.lua" do
+  source "aweconf/rc.lua"
+  owner "root"
+
+  action :create
+end

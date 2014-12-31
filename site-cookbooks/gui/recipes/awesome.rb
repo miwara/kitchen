@@ -7,7 +7,7 @@ awesome
 end
 
 template "/root/.xinitrc" do
-  source "awesome.erb"
+  source "xinitrc/awesome.erb"
   owner "root"
 
   action :create

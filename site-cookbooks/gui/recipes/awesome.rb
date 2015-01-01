@@ -1,5 +1,8 @@
 %w{
 awesome
+xorg-server-xephyr
+xcompmgr
+transset-df
 }.each do |pkg|
   package pkg do
     action :upgrade

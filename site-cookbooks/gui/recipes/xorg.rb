@@ -21,3 +21,10 @@ template "/home/#{node['user']}/.xinitrc" do
 
   action :create
 end
+
+template "/home/#{node['user']}/.Xmodmap" do
+  source "xmodmap"
+  user "#{node['user']}"
+
+  action :create
+end

@@ -32,6 +32,8 @@ end
 execute "python package install" do
   user "root"
   command <<-EOF
+#{node['python']['pip']} install ipython
+#{node['python']['pip']} install pyreadline
 #{node['python']['pip']} install numpy
 #{node['python']['pip']} install scipy
 #{node['python']['pip']} install matplotlib

@@ -12,13 +12,6 @@ sqlite
 tk
 valgrind
 gdb
-}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-%w{
 blas
 lapack
 gcc-fortran
@@ -28,37 +21,20 @@ gcc-fortran
   end
 end
 
-execute "pip install numpy" do
+%w{
+
+}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+execute "python package install" do
   user "root"
   command <<-EOF
 #{node['python']['pip']} install numpy
-EOF
-end
-
-execute "pip install scipy" do
-  user "root"
-  command <<-EOF
 #{node['python']['pip']} install scipy
-EOF
-end
-
-execute "pip install pandas" do
-  user "root"
-  command <<-EOF
-#{node['python']['pip']} install pandas
-EOF
-end
-
-execute "pip install matploglib" do
-  user "root"
-  command <<-EOF
 #{node['python']['pip']} install matplotlib
-EOF
-end
-
-execute "pip install scikit-learn" do
-  user "root"
-  command <<-EOF
 #{node['python']['pip']} install scikit-learn
 EOF
 end

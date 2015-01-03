@@ -2,6 +2,7 @@
     "run_list": [
 	"keymap",
 	"sudo",
+	"gui", 
 	"utils",
 	"python3::install",
 	"recipe[cookbook-emacs]",

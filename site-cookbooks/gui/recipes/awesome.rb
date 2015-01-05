@@ -15,3 +15,10 @@ template "/etc/xdg/awesome/rc.lua" do
 
   action :create
 end
+
+template "/usr/share/awesome/themes/default/theme.lua" do
+  source "theme.lua"
+  owner "root"
+
+  action :create
+end

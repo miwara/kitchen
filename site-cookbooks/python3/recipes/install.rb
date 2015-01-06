@@ -38,5 +38,6 @@ execute "python package install" do
 #{node['python']['pip']} install scipy
 #{node['python']['pip']} install matplotlib
 #{node['python']['pip']} install scikit-learn
+#{node['python']['pip']} install pynote
 EOF
 end

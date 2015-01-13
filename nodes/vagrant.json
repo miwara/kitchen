@@ -5,6 +5,7 @@
 	"gui",
 	"utils",
 	"python3::install",
+	"postgresql",
 //	"recipe[cookbook-emacs]",
 	"recipe[cookbook-dotfiles]",
 	"recipe[cookbook-cask]",

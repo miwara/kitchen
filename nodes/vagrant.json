@@ -6,7 +6,6 @@
 	"utils",
 	"python3::install",
 	"postgresql",
-//	"recipe[cookbook-emacs]",
 	"cookbook-dotfiles",
 	"cookbook-cask",
 	"cookbook-cask::install-emacspkg",

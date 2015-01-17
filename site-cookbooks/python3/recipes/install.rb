@@ -21,17 +21,14 @@ gcc-fortran
   end
 end
 
+template "#{Chef::Config['file_cache_path']}/pip_freeze" do
+  source "pip_freeze"
 
+  notifies :run, "execute[python package install]", :immediately
+end
 
 execute "python package install" do
-  user "root"
-  command <<-EOF
-#{node['python']['pip']} install ipython
-#{node['python']['pip']} install pyreadline
-#{node['python']['pip']} install numpy
-#{node['python']['pip']} install scipy
-#{node['python']['pip']} install matplotlib
-#{node['python']['pip']} install scikit-learn
-#{node['python']['pip']} install pynote
-EOF
+  command "#{node['python']['pip']} install -r #{Chef::Config['file_cache_path']}/pip_freeze"
+
+  action :nothing
 end

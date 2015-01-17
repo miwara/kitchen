@@ -16,5 +16,10 @@ execute "exec locale-gen" do
   action :nothing
 end
 
-
-
+%w{
+otf-ipafont
+}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end

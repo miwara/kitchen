@@ -21,13 +21,7 @@ gcc-fortran
   end
 end
 
-%w{
 
-}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
 
 execute "python package install" do
   user "root"

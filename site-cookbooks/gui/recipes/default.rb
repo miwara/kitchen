@@ -5,6 +5,7 @@
 include_recipe "gui::xorg"
 include_recipe "gui::awesome"
 include_recipe "gui::slim"
+include_recipe "gui::fcitx"
 
 %w{
 gnome-terminal

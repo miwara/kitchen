@@ -10,7 +10,6 @@
 	"postgresql",
 	"cookbook-cask",
 	"cookbook-dotfiles",
-	"cookbook-cask::install-emacspkg",
 	"empty"
     ],
     "user" : "vagrant",

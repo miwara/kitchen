@@ -2,6 +2,7 @@
 fcitx
 fcitx-mozc
 fcitx-qt4
+fcitx-configtool
 }.each do |pkg|
   package pkg do
     action :upgrade

@@ -6,6 +6,7 @@ fcitx-configtool
 }.each do |pkg|
   package pkg do
     action :upgrade
+    notifies :run, "execute[exec fcitx]", :immediately
   end
 end
 
@@ -49,6 +50,11 @@ fcitx-xkb.config
 
     notifies :run, "execute[reload fcitx]"
   end
+end
+
+execute "exec fcitx" do
+  command "fcitx"
+  action :nothing
 end
 
 execute "reload fcitx" do

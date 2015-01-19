@@ -15,6 +15,7 @@ strace
 nano
 emacs
 gdb
+tree
 }.each do |pkg|
   package pkg do
     action :upgrade

@@ -53,11 +53,17 @@ fcitx-xkb.config
 end
 
 execute "exec fcitx" do
+  user "#{node['user']}"
+  group "#{node['group']}"
+
   command "fcitx"
   action :nothing
 end
 
 execute "reload fcitx" do
+  user "#{node['user']}"
+  group "#{node['group']}"
+
   command "fcitx -r"
   action :nothing
 end

@@ -8,6 +8,8 @@
 	"utils",
 	"python3::install",
 	"postgresql",
+	"llvm",
+	"clang",
 	"cookbook-cask",
 	"cookbook-dotfiles",
 	"empty"

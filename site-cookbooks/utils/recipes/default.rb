@@ -14,6 +14,7 @@ rsync
 strace
 nano
 emacs
+gdb
 }.each do |pkg|
   package pkg do
     action :upgrade

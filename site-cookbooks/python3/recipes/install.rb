@@ -11,7 +11,6 @@ mpdecimal
 sqlite
 tk
 valgrind
-gdb
 blas
 lapack
 gcc-fortran

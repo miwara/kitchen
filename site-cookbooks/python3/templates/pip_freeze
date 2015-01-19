@@ -1,12 +1,3 @@
-Babel
-click
-nose
-plaintable
-pyparsing
-python-dateutil
-pytz
-six
-
 ipython
 pyreadline
 matplotlib

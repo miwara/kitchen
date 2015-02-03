@@ -8,6 +8,7 @@
 	"utils",
 	"python3::install",
 	"postgresql",
+	"docker",
 	"llvm",
 	"clang",
 	"cookbook-cask",

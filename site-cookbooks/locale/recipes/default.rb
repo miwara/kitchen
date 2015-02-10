@@ -15,3 +15,9 @@ execute "exec locale-gen" do
   command "locale-gen"
   action :nothing
 end
+
+# timezone
+link "/etc/localtime" do
+  to "/usr/share/zoneinfo/Asia/Tokyo"
+  link_type :symbolic
+end

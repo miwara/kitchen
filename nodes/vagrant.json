@@ -8,6 +8,8 @@
 	"utils",
 	"python3::install",
 	"postgresql",
+	"apache",
+	"php",
 	"docker",
 	"llvm",
 	"clang",

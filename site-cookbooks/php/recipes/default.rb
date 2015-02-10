@@ -14,4 +14,5 @@ end
 
 template "/etc/php/php.ini" do
   source "/etc/php/php.ini"
+  notifies :reload, 'service[httpd]'
 end

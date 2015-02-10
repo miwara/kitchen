@@ -11,7 +11,7 @@ execute "enable docker.service" do
   not_if "systemctl status docker.service | grep enabled"
 end
 
-execute "subsume docker group" do
-  command "gpasswd -a #{node['user']} docker"
-  not_if "grep docker /etc/group | grep #{node['user']}"
+service "docker" do
+  supports :status => true, :restart => true, :reload => true
+  action [ :enable, :start ]
 end

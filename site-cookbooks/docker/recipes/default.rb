@@ -6,9 +6,9 @@ package "docker" do
   action :upgrade
 end
 
-execute "enable docker.service" do
-  command "systemctl enable docker.service"
-  not_if "systemctl status docker.service | grep enabled"
+service "docker" do
+  supports :status => true, :restart => true, :reload => true
+  action [ :enable, :start ]
 end
 
 execute "subsume docker group" do

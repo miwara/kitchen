@@ -15,7 +15,7 @@ template "/etc/slim.conf" do
   action :create
 end
 
-service "slim" do
-  supports :status => true, :restart => true, :reload => true
-  action [:enable, :start ]
+execute "enable slim.service" do
+  command "systemctl enable slim.service"
+  not_if "systemctl status slim.service | grep enabled"
 end

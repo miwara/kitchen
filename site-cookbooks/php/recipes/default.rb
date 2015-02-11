@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w{php php-apache php-pgsql}.each do |pkg|
+%w{php php-pear php-apache php-pgsql}.each do |pkg|
   package pkg do
     action :upgrade
   end

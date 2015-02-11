@@ -10,6 +10,7 @@
 	"postgresql",
 	"apache",
 	"php",
+	"php::composer",
 	"docker",
 	"llvm",
 	"clang",

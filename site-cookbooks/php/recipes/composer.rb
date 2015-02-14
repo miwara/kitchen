@@ -7,7 +7,7 @@ execute "install composer" do
   cwd "/home/#{node['user']}"
 
   command <<-EOH
-  curl -sS https://getcomposer.org/installer | php
+  curl -sS #{node['composer']['uri']} | php
   sudo mv $HOME/composer.phar /usr/local/bin/composer
   EOH
 

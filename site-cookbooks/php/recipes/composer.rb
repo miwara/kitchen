@@ -6,10 +6,7 @@ execute "install composer" do
   environment "HOME" => "/home/#{node['user']}"
   cwd "/home/#{node['user']}"
 
-  command <<-EOH
-  curl -sS #{node['composer']['uri']} | php
-  sudo mv $HOME/composer.phar /usr/local/bin/composer
-  EOH
+  command "curl -sS #{node['composer']['uri']} | php -- --filename=composer --install-dir=$HOME"
 
   not_if "test -e /usr/local/bin/composer"
 end

@@ -8,5 +8,5 @@ execute "install composer" do
 
   command "curl -sS #{node['composer']['uri']} | php -- --filename=composer --install-dir=$HOME"
 
-  not_if "test -e /usr/local/bin/composer"
+  not_if "test -e /home/#{node['user']}/composer"
 end

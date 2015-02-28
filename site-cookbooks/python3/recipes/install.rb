@@ -32,7 +32,7 @@ pynote
 }.each do |pip_pkg|
   execute pip_pkg do
     command "pip install #{pip_pkg}"
-
+    not_if "pip freeze | grep #{pip_pkg}"
   end
 end
 

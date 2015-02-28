@@ -1,6 +1,10 @@
 #
 # cookbook:: pacman
 #
+package "yaourt" do
+  action :upgrade
+end
+
 template "/etc/pacman.conf" do
   source "/etc/pacman.conf"
 

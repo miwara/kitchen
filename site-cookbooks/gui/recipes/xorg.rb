@@ -4,6 +4,7 @@ xorg-server-utils
 xorg-xinit
 xorg-utils
 xterm
+libunwind
 }.each do |pkg|
   package pkg do
     action :upgrade

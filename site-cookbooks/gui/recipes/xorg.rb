@@ -4,17 +4,22 @@ xorg-server-utils
 xorg-xinit
 xorg-utils
 xterm
+libunwind
 }.each do |pkg|
   package pkg do
     action :upgrade
   end
 end
 
-template "/etc/X11/xorg.conf.d/10-keymap.conf" do
-  source "xorgconf/10-keymap.conf"
-  action :create
+%w{
+10-keymap.conf
+20-monitor.conf
+}.each do |configurefile|
+  template "/etc/X11/xorg.conf.d/#{configurefile}" do
+    source "xorgconf/#{configurefile}"
+    action :create
+  end
 end
-
 
 template "/home/#{node['user']}/.xinitrc" do
   source "xinitrc"

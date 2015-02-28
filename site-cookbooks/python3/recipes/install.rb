@@ -20,6 +20,23 @@ gcc-fortran
   end
 end
 
+%w{
+numpy
+scipy
+matplotlib
+scikit-learn
+ipython
+
+pyreadline
+pynote
+}.each do |pip_pkg|
+  execute pip_pkg do
+    command "pip install #{pip_pkg}"
+    not_if "pip freeze | grep #{pip_pkg}"
+  end
+end
+
+=begin
 template "#{Chef::Config['file_cache_path']}/pip_freeze" do
   source "pip_freeze"
 
@@ -31,3 +48,4 @@ execute "python package install" do
 
   action :nothing
 end
+=end

@@ -12,6 +12,7 @@ libunwind
 end
 
 %w{
+00-xorg.conf
 10-keymap.conf
 20-monitor.conf
 }.each do |configurefile|

@@ -15,6 +15,7 @@
 	"llvm",
 	"clang",
 	"R",
+	"haskell",
 	"cookbook-cask",
 	"cookbook-dotfiles",
 	"empty"

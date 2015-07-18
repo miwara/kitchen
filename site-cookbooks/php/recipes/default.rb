@@ -9,6 +9,7 @@
 %w{
 php php-pear php-apache
 php-pgsql php-mcrypt
+php-intl
 }.each do |pkg|
   package pkg do
     action :upgrade
